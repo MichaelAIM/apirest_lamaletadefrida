@@ -7,7 +7,7 @@ const route = (0, express_1.Router)();
 route.get("/", [validarToken_1.validarjwt], personas_1.getAllPersonas);
 // route.get("/rut/:rut",[validarjwt],g);
 route.get("/:id", [validarToken_1.validarjwt], personas_1.getPersonaById);
-route.post("/", [validarToken_1.validarjwt], personas_1.createPersona);
+route.post("/", personas_1.createPersona);
 route.put("/:id", [validarToken_1.validarjwt], personas_1.updatePersona);
 route.delete("/:id", [validarToken_1.validarjwt], personas_1.deletePersona);
 exports.default = route;
